@@ -1,0 +1,274 @@
+/* Configurações Gerais e Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #2d3748;
+    background-color: #f7fafc;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+
+/* Tipografia Comum */
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    color: #1a4d2e; /* Verde Agro Escuro */
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #718096;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+/* Botões */
+.btn-primary {
+    display: inline-block;
+    background-color: #49733a; /* Verde Oliva */
+    color: #ffffff;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #37592b;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2d3748;
+}
+
+.logo span {
+    color: #49733a;
+}
+
+nav a {
+    text-decoration: none;
+    color: #4a5568;
+    margin-left: 20px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #49733a;
+}
+
+nav .btn-nav {
+    background-color: #e6fffa;
+    color: #234e52;
+    padding: 8px 16px;
+    border-radius: 4px;
+}
+
+nav .btn-nav:hover {
+    background-color: #b2f5ea;
+}
+
+/* Seção Hero (Banner Principal) */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                url('https://images.unsplash.com/photo-1592982537447-744077110b90?q=80&w=1920') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 80px; /* Desconto do header fixo */
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    font-weight: 300;
+}
+
+/* Seção dos Pilares (Grid de 3 Colunas) */
+.pilares-section {
+    background-color: #ffffff;
+}
+
+.grid-pilares {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.card-pilar {
+    background-color: #f7fafc;
+    padding: 40px 30px;
+    border-radius: 8px;
+    border-top: 4px solid #49733a;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-pilar:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.card-pilar h3 {
+    font-size: 1.4rem;
+    color: #1a4d2e;
+    margin-bottom: 15px;
+}
+
+/* Seção Casos de Sucesso */
+.casos-section {
+    background-color: #edf2f7;
+}
+
+.caso-destaque {
+    background: linear-gradient(rgba(26, 77, 46, 0.85), rgba(26, 77, 46, 0.85)), 
+                url('https://images.unsplash.com/photo-1593113598332-cd288d649433?q=80&w=1200') no-repeat center center/cover;
+    padding: 60px;
+    border-radius: 12px;
+    color: #ffffff;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+.caso-texto .tag {
+    background-color: #dd6b20; /* Tom Terroso de Alerta/Destaque */
+    color: #ffffff;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.caso-texto h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.caso-texto p {
+    font-size: 1.1rem;
+    font-style: italic;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.caso-texto .autor {
+    font-style: normal;
+    color: #cbd5e0;
+}
+
+/* Seção Formulário de Contato */
+.contato-section {
+    background-color: #ffffff;
+}
+
+.form-style {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-style input, .form-style textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #cbd5e0;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 1rem;
+    background-color: #f7fafc;
+}
+
+.form-style input:focus, .form-style textarea:focus {
+    outline: none;
+    border-color: #49733a;
+    background-color: #ffffff;
+}
+
+.feedback-mensagem {
+    text-align: center;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+/* Rodapé */
+footer {
+    background-color: #1a202c;
+    color: #a0aec0;
+    text-align: center;
+    padding: 40px 0;
+    font-size: 0.9rem;
+}
+
+footer .footer-content p {
+    margin-bottom: 5px;
+}
+
+/* Responsividade Básica (Celulares) */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    nav a {
+        margin: 0 10px;
+    }
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+    .caso-destaque {
+        padding: 30px 20px;
+    }
+}
